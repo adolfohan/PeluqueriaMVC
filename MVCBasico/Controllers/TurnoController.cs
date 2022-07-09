@@ -68,7 +68,7 @@ namespace MVCBasico.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,ClienteId,PeluqueroId,Servicio,FechaInscripto")] Turno turno)
         {
-            if (ModelState.IsValid && !hayTurno(turno) && fechaCorrecta(turno))
+            if (ModelState.IsValid && !hayTurno(turno) && fechaCorrecta(turno) && horarioCorrecto(turno))
             {
                 _context.Add(turno);
                 await _context.SaveChangesAsync();
@@ -95,6 +95,12 @@ namespace MVCBasico.Controllers
         {
             DateTime now = DateTime.Now;
             return turnoEntrante.FechaInscripto.CompareTo(now) >= 0;
+        }
+
+        private bool horarioCorrecto(Turno turno)
+        {
+            int hour = turno.FechaInscripto.Hour;
+                return hour > 9 && hour < 20 && turno.FechaInscripto.Minute == 0;
         }
 
 
@@ -128,7 +134,7 @@ namespace MVCBasico.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid && TurnoExists(turno.Id) && fechaCorrecta(turno))
+            if (ModelState.IsValid && TurnoExists(turno.Id) && fechaCorrecta(turno) && horarioCorrecto(turno))
             {
                 try
                 {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\Pelu\\PeluqueriaMVC\\MVCBasico\\MVCBasico.csproj": {}
+    "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\PeluqueriaGrupoA\\MVCBasico\\MVCBasico.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\Pelu\\PeluqueriaMVC\\MVCBasico\\MVCBasico.csproj": {
+    "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\PeluqueriaGrupoA\\MVCBasico\\MVCBasico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\Pelu\\PeluqueriaMVC\\MVCBasico\\MVCBasico.csproj",
+        "projectUniqueName": "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\PeluqueriaGrupoA\\MVCBasico\\MVCBasico.csproj",
         "projectName": "MVCBasico",
-        "projectPath": "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\Pelu\\PeluqueriaMVC\\MVCBasico\\MVCBasico.csproj",
+        "projectPath": "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\PeluqueriaGrupoA\\MVCBasico\\MVCBasico.csproj",
         "packagesPath": "C:\\Users\\Quali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\Pelu\\PeluqueriaMVC\\MVCBasico\\obj\\",
+        "outputPath": "C:\\Users\\Quali\\Desktop\\Ort\\PNT1\\PeluqueriaGrupoA\\MVCBasico\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Quali\\AppData\\Roaming\\NuGet\\NuGet.Config",
