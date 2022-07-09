@@ -32,7 +32,7 @@ namespace MVCBasico.Models
         [Required(ErrorMessage = "Ingrese una fecha válida")]
         //[RegularExpression("^([0-9][0-9][0-9][0-9])[-/.](0[1-9]|1[012])[-/.](0[1-9]|[12][0-9]|3[01])T(1[0-9]):(00)$", ErrorMessage = "Los turnos se toman de 10:00 a 19:00" +
         //    " [La hora debe ser en punto]")]
-        [DisplayFormat(DataFormatString = "{0:MM.dd.yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Fecha")]
         public DateTime FechaInscripto { get; set; }
     }
