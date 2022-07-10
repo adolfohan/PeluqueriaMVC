@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVCBasico.Context;
 using MVCBasico.Models;
-using System;
 using System.Windows;
 
 namespace MVCBasico.Controllers
@@ -68,7 +67,7 @@ namespace MVCBasico.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,ClienteId,PeluqueroId,Servicio,FechaInscripto")] Turno turno)
         {
-            if (ModelState.IsValid && !hayTurno(turno) && fechaCorrecta(turno) && horarioCorrecto(turno))
+            if (ModelState.IsValid && !hayTurno(turno) && horarioCorrecto(turno)) // && fechaCorrecta(turno) 
             {
                 _context.Add(turno);
                 await _context.SaveChangesAsync();
