@@ -36,7 +36,7 @@ namespace MVCBasico.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}", ApplyFormatInEditMode = false)]
         [LessDate]
         //[Weekday]
-        public System.DateTime FechaInscripto { get; set; }
+        public DateTime FechaInscripto { get; set; }
     }
 
 }
