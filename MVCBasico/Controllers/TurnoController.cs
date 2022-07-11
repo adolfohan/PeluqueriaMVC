@@ -57,6 +57,8 @@ namespace MVCBasico.Controllers
         {
             ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido");
             ViewData["PeluqueroId"] = new SelectList(_context.Peluqueros, "Id", "Apellido");
+
+            ViewBag.Mensaje = "Los turnos deben ser de Lunes a Viernes de 10:00 a 19:00 hs. Turnos cada 1 hora, ejemplo: 10:00, 11:00, etc.";
             return View();
         }
 
