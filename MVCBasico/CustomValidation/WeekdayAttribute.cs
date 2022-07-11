@@ -6,7 +6,6 @@ namespace MVCBasico.CustomValidation
 {
     public class WeekdayAttribute : ValidationAttribute
     {
-
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             DayOfWeek today = DateTime.Today.DayOfWeek;
