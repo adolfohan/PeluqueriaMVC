@@ -144,7 +144,7 @@ namespace MVCBasico.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid && !hayTurno(turno) && fechaCorrecta(turno) && horarioCorrecto(turno))
+            if (ModelState.IsValid && TurnoExists(turno.Id) && fechaCorrecta(turno) && horarioCorrecto(turno))
             {
                 try
                 {
@@ -167,10 +167,6 @@ namespace MVCBasico.Controllers
             if (!horarioCorrecto(turno))
             {
                 ViewBag.MensajeErrorHorario = "Los turnos deben ser de Lunes a Viernes de 10:00 a 19:00 hs. Turnos cada 1 hora, ejemplo: 10:00, 11:00, etc.";
-            }
-            if (hayTurno(turno))
-            {
-                ViewBag.MensajeErrorTurno = "El/La Peluquero/a se encuentra ocupado en ese horario. Por favor elija otro";
             }
             ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido", turno.ClienteId);
             ViewData["PeluqueroId"] = new SelectList(_context.Peluqueros, "Id", "Apellido", turno.PeluqueroId);
