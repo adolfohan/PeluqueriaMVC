@@ -35,6 +35,7 @@ namespace MVCBasico.Models
         [Required(ErrorMessage = "Ingrese una fecha")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}", ApplyFormatInEditMode = false)]
         [LessDate]
+        //[TurnoExists]
         //[Weekday]
         public DateTime FechaInscripto { get; set; }
     }

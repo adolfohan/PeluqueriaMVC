@@ -9,6 +9,10 @@ namespace MVCBasico.Context
 {
     public class PeluqueriaDatabaseContext : DbContext
     {
+        public PeluqueriaDatabaseContext()
+        {
+        }
+
         public PeluqueriaDatabaseContext(DbContextOptions<PeluqueriaDatabaseContext> options)
        : base(options)
         {

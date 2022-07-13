@@ -6,7 +6,6 @@
 
 @{
     ViewData["Title"] = "Crear";
-    <b>@ViewBag.Mensaje</b>;
 }
 
 <hr />
@@ -32,6 +31,8 @@
                 <label asp-for="FechaInscripto" class="control-label"></label>
                 <input id="fecha" asp-for="FechaInscripto" class="form-control" />
                 <span asp-validation-for="FechaInscripto" class="text-danger"></span>
+                    <b style="color: red; font-weight: 400">@ViewBag.MensajeErrorTurno</b>
+                    <b style="color: red; font-weight: 400">@ViewBag.MensajeErrorHorario</b>
             </div>
             <div class="form-group">
                 <label asp-for="PeluqueroId" class="control-label"></label>
